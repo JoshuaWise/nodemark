@@ -1,0 +1,27 @@
+{
+  "name": "nodemark",
+  "version": "0.1.0",
+  "description": "A modern benchmarking library for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaWise/nodemark.git"
+  },
+  "keywords": [
+    "benchmark",
+    "performance",
+    "perf",
+    "benchmarkjs",
+    "speed",
+    "test"
+  ],
+  "author": "Joshua Wise <joshuathomaswise@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshuaWise/nodemark/issues"
+  },
+  "homepage": "https://github.com/JoshuaWise/nodemark#readme"
+}
