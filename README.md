@@ -14,7 +14,7 @@ const results = benchmark(myFunction, setupFunction);
 console.log(results); // => 14,114,886 ops/sec ±0.58% (7906233 samples)
 ```
 
-## Statistical significance
+## Statistical Significance
 
 When doing any measurement it's important to only respect statistically significant results. Thankfully, `nodemark` does many things to make this easy:
 
