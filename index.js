@@ -1,6 +1,5 @@
 'use strict';
 const Result = require('./lib/result');
-const clean = require('./lib/clean');
 const async = require('./lib/async');
 const sync = require('./lib/sync');
 
@@ -17,20 +16,19 @@ module.exports = (fn, setup, duration) => {
 	if (!fn.length && setup.length) fn = makeAsync(fn);
 	if (!setup.length && fn.length) setup = makeAsync(setup);
 	
-	// Benchmark the benchmarker, so we can factor it out later.
+	// Get the benchmarker warmed up.
 	const noop = fn.length ? noopAsync : noopSync;
 	const noise = benchmark(noop, noop, Math.min(Math.round(duration / 10), 300));
 	
 	// Then run the actual benchmark.
-	if (!fn.length) return benchmark(fn, setup, duration, noise);
-	return noise.then(noise => benchmark(fn, setup, duration, noise));
+	return benchmark(fn, setup, duration);
 };
 
-const benchmark = (fn, setup, duration, noise) => {
-	if (!fn.length) return new Result(clean(sync(fn, setup, duration), noise));
+const benchmark = (fn, setup, duration) => {
+	if (!fn.length) return new Result(sync(fn, setup, duration));
 	let callback;
 	const promise = new Promise((resolve, reject) => { callback =
-		(err, samples) => err ? reject(err) : resolve(new Result(clean(samples, noise))); });
+		(err, samples) => err ? reject(err) : resolve(new Result(samples)); });
 	async(fn, setup, duration, callback);
 	return promise;
 };
