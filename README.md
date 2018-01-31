@@ -27,7 +27,7 @@ The combination of these things makes it a highly accurate measuring device. How
 
 # API
 
-## benchmark(*subject*, [*setup*, [*duration*]]) -> *benchmarkResult*
+### benchmark(*subject*, [*setup*, [*duration*]]) -> *benchmarkResult*
 
 Runs a new benchmark. This measures the performance of the `subject` function. If a `setup` function is provided, it will be invoked before every execution of `subject`.
 
@@ -42,7 +42,7 @@ benchmark(callback => fs.readFile('foo.txt', callback))
 
 > There is no plan to support promises in `subject` and `setup` because it would cause too much overhead and yield inaccurate results.
 
-## class *BenchmarkResult*
+### class *BenchmarkResult*
 
 Each benchmark returns an immutable object describing the result of that benchmark. It has five properties:
 
@@ -52,25 +52,25 @@ Each benchmark returns an immutable object describing the result of that benchma
 * `min`, the slowest measured time in nanoseconds
 * `count`, the number of times the subject was invoked and measured
 
-### .nanoseconds([*precision*]) -> *number*
+#### .nanoseconds([*precision*]) -> *number*
 
-### .microseconds([*precision*]) -> *number*
+#### .microseconds([*precision*]) -> *number*
 
-### .milliseconds([*precision*]) -> *number*
+#### .milliseconds([*precision*]) -> *number*
 
-### .seconds([*precision*]) -> *number*
+#### .seconds([*precision*]) -> *number*
 
 Returns the average measured time, rounded to the nearest whole number or the number or decimal places specified by `precision`.
 
-### .hz([*precision*]) -> *number*
+#### .hz([*precision*]) -> *number*
 
 Returns the average number of executions per second, rounded to the nearest whole number or the number of decimal places specified by `precision`.
 
-### .sd([*precision*]) -> *number*
+#### .sd([*precision*]) -> *number*
 
 Returns the standard deviation in nanoseconds, rounded to the nearest whole number or the number of decimal places specified by `precision`.
 
-### .toString([*format*]) -> *number*
+#### .toString([*format*]) -> *number*
 
 Returns a nicely formatted string describing the result of the benchmark. By default the `"hz"` format is used (displaying ops/sec), but you can optionally specify `"nanoseconds"`, `"microseconds"`, `"milliseconds"`, or `"seconds"` to change the information returned.
 
