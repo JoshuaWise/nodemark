@@ -1,7 +1,7 @@
 {
   "name": "nodemark",
   "version": "0.2.0",
-  "description": "A modern benchmarking library for Node.js.",
+  "description": "A modern benchmarking library for Node.js",
   "main": "index.js",
   "scripts": {
     "test": "$(npm bin)/mocha --exit"
