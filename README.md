@@ -78,7 +78,7 @@ Returns the standard deviation in nanoseconds, rounded to the nearest whole numb
 
 ### .toString([*format*]) -> *number*
 
-Returns a nicely formatted string describing the result of the benchmark. By default the `"hz"` format is used (displaying ops/sec), but you can optionally specify `"nanoseconds"`, `"microseconds"`, `"milliseconds"`, or `"seconds"` to change the information returned.
+Returns a nicely formatted string describing the result of the benchmark. By default the `"hz"` format is used, which displays ops/sec, but you can optionally specify `"nanoseconds"`, `"microseconds"`, `"milliseconds"`, or `"seconds"` to change the information returned.
 
 ## License
 
