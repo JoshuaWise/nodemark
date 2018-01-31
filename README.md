@@ -12,7 +12,7 @@ const benchmark = require('nodemark');
 
 const results = benchmark(myFunction, setupFunction);
 console.log(results); // => 14,114,886 ops/sec ±0.58% (7906233 samples)
-console.log(results.mean); // => 70.84718927237527
+console.log(results.nanoseconds()); // => 71
 ```
 
 ## Statistical Significance
