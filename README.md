@@ -17,7 +17,7 @@ console.log(result.nanoseconds()); // => 71
 
 ## Statistical Significance
 
-When doing any measurement it's important to have statistically significant results. Thankfully, `nodemark` makes this easy:
+When running a benchmark it's important to generate statistically significant results. Thankfully, `nodemark` makes this easy:
 
 * The margin of error is calculated for you.
 * The benchmarker ignores samples taken before v8 has a chance to optimize things ([JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation)).
