@@ -31,7 +31,7 @@ The combination of these things makes it a highly accurate measuring device. How
 
 Runs a new benchmark. This measures the performance of the `subject` function. If a `setup` function is provided, it will be invoked before every execution of `subject`.
 
-By default the benchmark runs for about 3 seconds, but this can be overridden by passing a `duration` number (in milliseconds). Regardless of the desired duration, the benchmark will not finish until the `subject` has been run at least 10 times.
+By default, the benchmark runs for about 3 seconds, but this can be overridden by passing a `duration` number (in milliseconds). Regardless of the desired duration, the benchmark will not finish until the `subject` has been run at least 10 times.
 
 Both `subject` and `setup` can run asynchronously by declaring a callback argument in their signatures. If you do this, you must invoke the callback to indicate that the operation is complete. When running an asyncronous benchmark, this function returns a promise. However, because the `subject` and `setup` functions use callbacks rather than promises, synchronous errors will not automatically be caught.
 
