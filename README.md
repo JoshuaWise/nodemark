@@ -44,7 +44,7 @@ benchmark(callback => fs.readFile('foo.txt', callback))
 
 ## class *BenchmarkResult*
 
-An immutable object representing the result of a benchmark. It has five properties:
+Each benchmark returns an immutable object describing the result of that benchmark. It has five properties:
 
 * `mean`, the average measured time in nanoseconds
 * `error`, the margin of error as a ratio of the mean
