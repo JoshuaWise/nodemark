@@ -25,7 +25,7 @@ In benchmarking, it's important to generate statistically significant results. T
 
 The combination of these things makes it a highly accurate measuring device. However, any benchmark done in JavaScript has its limits. If the average time measured by a benchmark is too small to be reliable (< 5ns), the results will be `NaN` in order to avoid providing misleading information.
 
-# API
+## API
 
 ### benchmark(*subject*, [*setup*, [*duration*]]) -> *benchmarkResult*
 
