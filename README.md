@@ -29,7 +29,7 @@ The combination of these things makes it a highly accurate measuring device. How
 
 ## benchmark(*subject*, [*setup*, [*duration*]]) -> *benchmarkResult*
 
-This will measure the performance of the `subject` function. If a `setup` function is provided, it is invoked before every iteration of `subject`.
+Runs a new benchmark. This measures the performance of the `subject` function. If a `setup` function is provided, it is invoked before every iteration of `subject`.
 
 By default the benchmark runs for about 3 seconds, but this can be overridden by passing a `duration` number (in milliseconds). Regardless of the desired duration, the benchmark will not finish until the `subject` has been run at least 10 times.
 
