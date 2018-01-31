@@ -1,5 +1,5 @@
 # nodemark
-A modern benchmarking library for Node.js
+A modern benchmarking library for Node.js, capable of generating statistically significant results.
 
 ## Installation
 ```
