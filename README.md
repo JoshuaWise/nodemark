@@ -1,4 +1,4 @@
-# nodemark
+# nodemark [![Build Status](https://travis-ci.org/JoshuaWise/nodemark.svg?branch=master)](https://travis-ci.org/JoshuaWise/nodemark)
 A modern benchmarking library for Node.js, capable of generating statistically significant results.
 
 ## Installation
