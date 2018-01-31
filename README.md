@@ -58,15 +58,15 @@ Returns `this.mean`, rounded to the nearest whole number or the number or decima
 
 ### .microseconds([*precision*]) -> *number*
 
-Same as [.nanoseconds()](#nanosecondsprecision---number), but for microseconds.
+Same as [.nanoseconds()](#nanosecondsprecision---number), but the value is in microseconds.
 
 ### .milliseconds([*precision*]) -> *number*
 
-Same as [.nanoseconds()](#nanosecondsprecision---number), but for milliseconds.
+Same as [.nanoseconds()](#nanosecondsprecision---number), but the value is in milliseconds.
 
 ### .seconds([*precision*]) -> *number*
 
-Same as [.nanoseconds()](#nanosecondsprecision---number), but for seconds.
+Same as [.nanoseconds()](#nanosecondsprecision---number), but the value is in seconds.
 
 ### .hz([*precision*]) -> *number*
 
