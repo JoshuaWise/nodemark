@@ -10,9 +10,9 @@ npm install --save-dev nodemark
 ```js
 const benchmark = require('nodemark');
 
-const results = benchmark(myFunction, setupFunction);
-console.log(results); // => 14,114,886 ops/sec ±0.58% (7906233 samples)
-console.log(results.nanoseconds()); // => 71
+const result = benchmark(myFunction, setupFunction);
+console.log(result); // => 14,114,886 ops/sec ±0.58% (7906233 samples)
+console.log(result.nanoseconds()); // => 71
 ```
 
 ## Statistical Significance
