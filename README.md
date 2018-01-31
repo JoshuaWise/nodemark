@@ -20,8 +20,8 @@ console.log(result.nanoseconds()); // => 71
 In benchmarking, it's important to generate statistically significant results. Thankfully, `nodemark` makes this easy:
 
 * The *margin of error* is calculated for you.
-* Executions done before v8 has a chance to optimize things ([JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation)) are ignored.
 * The noise caused by `nodemark` is factored out of the results.
+* Executions done before v8 has a chance to optimize things ([JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation)) are ignored.
 
 The combination of these things makes it a highly accurate measuring device. However, any benchmark done in JavaScript has its limits. If the average time measured by a benchmark is too small to be reliable (< 5ns), the results will be returned as `NaN` in order to avoid giving misleading information.
 
