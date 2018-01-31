@@ -27,7 +27,7 @@ The combination of these things makes it a highly accurate measuring device. How
 
 # API
 
-## benchmark(*subject*, [[*setup*], *duration*]) -> *BenchmarkResult*
+## benchmark(*subject*, [*setup*, [*duration*]]) -> *BenchmarkResult*
 
 Runs a benchmark measuring the performance of the `subject` function. If a `setup` function is provided, it is invoked before every iteration of `subject`.
 
