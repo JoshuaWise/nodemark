@@ -21,9 +21,10 @@ In benchmarking, it's important to generate statistically significant results. T
 
 * The *margin of error* is calculated for you.
 * The noise caused by `nodemark` is factored out of the results.
+* The garbage collector is manipulated to prevent early runs from having an unfair advantage.
 * Executions done before v8 has a chance to optimize things ([JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation)) are ignored.
 
-The combination of these things makes it a highly accurate measuring device. However, any benchmark done in JavaScript has its limits. If the average time measured by a benchmark is too small to be reliable (< 1ns), the results will be `NaN` in order to avoid providing misleading information.
+The combination of these things makes it a highly accurate measuring device. However, any benchmark done in JavaScript has its limits. If the average time measured by a benchmark is too small to be reliable (< 10ns), the results will be `NaN` in order to avoid providing misleading information.
 
 # API
 
