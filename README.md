@@ -55,7 +55,7 @@ Each benchmark returns an immutable object describing the result of that benchma
 
 ### .nanoseconds([*precision*]) -> *number*
 
-Returns `this.mean`, rounded to the nearest whole number or the number or decimal places specified by `precision`.
+Returns `this.mean`, rounded to the nearest whole number or the number of decimal places specified by `precision`.
 
 ### .microseconds([*precision*]) -> *number*
 
