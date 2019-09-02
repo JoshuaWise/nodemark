@@ -9,9 +9,9 @@ module.exports = (fn, setup, duration, runs = null) => {
 	if (typeof setup !== 'function') throw new TypeError('Expected benchmark setup to be a function');
 	if (!Number.isInteger(duration)) throw new TypeError('Expected benchmark duration to be an integer');
   if (duration <= 0) throw new TypeError('Expected benchmark duration to be positive');
-	if (duration !== null) {
-		if (!Number.isInteger(duration)) throw new TypeError('Expected benchmark total runs to be an integer');
-		if (duration <= 0) throw new TypeError('Expected benchmark total runs to be positive');
+	if (runs !== null) {
+		if (!Number.isInteger(runs)) throw new TypeError('Expected benchmark total runs to be an integer');
+		if (runs <= 0) throw new TypeError('Expected benchmark total runs to be positive');
 	}
 	if (!fn.length && !setup.length) return benchmark.sync(fn, setup, duration, runs);
 	if (!fn.length) fn = makeAsync(fn);
