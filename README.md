@@ -28,11 +28,13 @@ The combination of these things makes it a highly accurate measuring device. How
 
 # API
 
-## benchmark(*subject*, [*setup*, [*duration*]]) -> *benchmarkResult*
+## benchmark(*subject*, [*setup*, [*duration*, [*runs*]]]) -> *benchmarkResult*
 
 Runs a new benchmark. This measures the performance of the `subject` function. If a `setup` function is provided, it will be invoked before every execution of `subject`.
 
 By default, the benchmark runs for about 3 seconds, but this can be overridden by passing a `duration` number (in milliseconds). Regardless of the desired duration, the benchmark will not finish until the `subject` has been run at least 10 times.
+
+If `runs` number is passed, the benchmark will generate results for the specified executions count of `subject`, ignoring `duration` property.
 
 Both `subject` and `setup` can run asynchronously by declaring a callback argument in their signature. If you do this, you must invoke the callback to indicate that the operation is complete. When running an asyncronous benchmark, this function returns a promise. However, because `subject` and `setup` use callbacks rather than promises, synchronous errors will not automatically be caught.
 
@@ -45,13 +47,14 @@ benchmark(callback => fs.readFile('foo.txt', callback))
 
 ## class *BenchmarkResult*
 
-Each benchmark returns an immutable object describing the result of that benchmark. It has five properties:
+Each benchmark returns an immutable object describing the result of that benchmark. It has six properties:
 
 * `mean`, the average measured time in nanoseconds
 * `error`, the margin of error as a ratio of the mean
 * `max`, the fastest measured time in nanoseconds
 * `min`, the slowest measured time in nanoseconds
 * `count`, the number of times the subject was invoked and measured
+* `samples`, current time for all executions of subject in nanoseconds
 
 ### .nanoseconds([*precision*]) -> *number*
 
