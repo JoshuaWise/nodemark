@@ -47,13 +47,14 @@ benchmark(callback => fs.readFile('foo.txt', callback))
 
 ## class *BenchmarkResult*
 
-Each benchmark returns an immutable object describing the result of that benchmark. It has five properties:
+Each benchmark returns an immutable object describing the result of that benchmark. It has six properties:
 
 * `mean`, the average measured time in nanoseconds
 * `error`, the margin of error as a ratio of the mean
 * `max`, the fastest measured time in nanoseconds
 * `min`, the slowest measured time in nanoseconds
 * `count`, the number of times the subject was invoked and measured
+* `samples`, current time for all executions of subject in nanoseconds
 
 ### .nanoseconds([*precision*]) -> *number*
 
