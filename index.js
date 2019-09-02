@@ -13,7 +13,7 @@ module.exports = (fn, setup, duration, runs = null) => {
 		if (!Number.isInteger(duration)) throw new TypeError('Expected benchmark total runs to be an integer');
 		if (duration <= 0) throw new TypeError('Expected benchmark total runs to be positive');
 	}
-	if (!fn.length && !setup.length) return benchmark.sync(fn, setup, duration);
+	if (!fn.length && !setup.length) return benchmark.sync(fn, setup, duration, runs);
 	if (!fn.length) fn = makeAsync(fn);
 	if (!setup.length) setup = makeAsync(setup);
 	return benchmark.async(fn, setup, duration, runs);
